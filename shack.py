@@ -390,7 +390,7 @@ def yayanxd():
         print('\n\n %s*%s \x1b[1;96mselamat datang %s%s%s'%(O,N,K,nama,N));time.sleep(1)
         print(' %s*%s \x1b[1;96mmohon untuk menggunakan sc ini sewajarnya, kami tidak bertanggung jawab jika sc ini disalah gunakan...'%(O,N));time.sleep(1)
         input(' %s*%s \x1b[1;96mtekan enter '%(O,N))
-        os.system('xdg-open https://youtube.com/channel/UCNvDaXoyAVCNJbSqtaXA-mg')
+        os.system('xdg-open https://www.facebook.com/bintangt.zy.92')
         menu()
     except AttributeError:
         print('\n %s[%s×%s] \x1b[1;91mcookies invalid'%(N,M,N));time.sleep(1);yayanxd()
