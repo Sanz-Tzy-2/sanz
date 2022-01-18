@@ -411,7 +411,7 @@ def menu():
         print('\n %s[%s×%s] \x1b[1;91mcookie invalid'%(N,M,N));time.sleep(2);os.system('rm -rf .token.txt');os.system('rm -rf .cokie.txt');yayanxd()
     except requests.exceptions.ConnectionError:
         exit('\n\n %s[%s!%s] \x1b[1;91mtidak ada koneksi\n'%(N,M,N))
-    IP = requests.get('https://yayanxd.my.id/server/ip').text
+     IP = requests.get("https://api.ipify.org").text
     _mmk_ = open('.cokie.txt').read()
     kueh  = {"cookie":_mmk_}
     print(" \x1b[1;97m[•] You IP   : %s"%(IP));time.sleep(0.03)
