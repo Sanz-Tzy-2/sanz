@@ -414,7 +414,7 @@ def menu():
      IP = requests.get("https://api.ipify.org").text
     _mmk_ = open('.cokie.txt').read()
     kueh  = {"cookie":_mmk_}
-    print(" \x1b[1;97m[•] You IP   : %s"%(IP));time.sleep(0.03)
+    print(" [•] IP KAMU   : %s"%(IP));time.sleep(0.03)
     print(" [•] \x1b[1;97mYou Name : %s%s%s\n"%(K,nama,N));time.sleep(0.03)
     print(' \x1b[1;93m[%s\x1b[1;96m01%s\x1b[1;93m] \x1b[1;97mCrack ID \x1b[1;93mdari anggota grup'%(O,N));time.sleep(0.03)
     print(' \x1b[1;93m[%s\x1b[1;96m02%s\x1b[1;93m] \x1b[1;97mCrack ID \x1b[1;93mdari teman publik'%(O,N));time.sleep(0.03)
